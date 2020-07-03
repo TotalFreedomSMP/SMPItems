@@ -1,18 +1,22 @@
 package me.totalfreedom.smpitems.mob;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import me.totalfreedom.smpitems.SMPItems;
 import me.totalfreedom.smpitems.item.*;
-import me.totalfreedom.smpitems.item.Bee;
 import org.bukkit.ChatColor;
-import org.bukkit.entity.*;
+import org.bukkit.entity.Creeper;
+import org.bukkit.entity.EnderDragon;
+import org.bukkit.entity.Enderman;
+import org.bukkit.entity.Skeleton;
+import org.bukkit.entity.Spider;
+import org.bukkit.entity.Wither;
+import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.scheduler.BukkitRunnable;
-import me.totalfreedom.smpitems.SMPItems;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 public class MobDrop implements Listener
 {
@@ -29,7 +33,9 @@ public class MobDrop implements Listener
     public void onEntityDeath(EntityDeathEvent e)
     {
         if (e.getEntity().getCustomName() == null)
+        {
             return;
+        }
 
         if (e.getEntity() instanceof Wither)
         {

@@ -1,10 +1,9 @@
 package me.totalfreedom.smpitems.util;
 
-import me.totalfreedom.smpitems.item.variant.*;
-import org.bukkit.Material;
-
 import java.util.Arrays;
 import java.util.List;
+import me.totalfreedom.smpitems.item.variant.*;
+import org.bukkit.Material;
 
 public class Groups
 {

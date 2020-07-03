@@ -1,5 +1,6 @@
 package me.totalfreedom.smpitems.command;
 
+import java.util.Objects;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -8,8 +9,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
-
-import java.util.Objects;
 
 public class Command_smpkilltubbies implements CommandExecutor
 {
@@ -36,7 +35,7 @@ public class Command_smpkilltubbies implements CommandExecutor
                             Objects.equals(entity.getCustomName(), ChatColor.LIGHT_PURPLE + "Tubby Wither Skeleton") ||
                             Objects.equals(entity.getCustomName(), ChatColor.GOLD + "Tubby Zombie")))
             {
-                ((LivingEntity) entity).setHealth(0.0);
+                ((LivingEntity)entity).setHealth(0.0);
                 count++;
             }
         }

@@ -1,7 +1,9 @@
 package me.totalfreedom.smpitems.listener;
 
+import me.totalfreedom.smpitems.SMPItems;
 import me.totalfreedom.smpitems.item.PowerEye;
 import me.totalfreedom.smpitems.mob.MobSpawn;
+import me.totalfreedom.smpitems.util.SUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.block.Block;
@@ -11,19 +13,21 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.*;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDeathEvent;
+import org.bukkit.event.entity.EntityEvent;
+import org.bukkit.event.entity.EntityRegainHealthEvent;
+import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.ItemStack;
-import me.totalfreedom.smpitems.SMPItems;
-import me.totalfreedom.smpitems.util.SUtil;
 
 @SuppressWarnings("deprecation")
 public class EnderDragonListener implements Listener
 {
     private SMPItems plugin;
-    
+
     public EnderDragonListener(SMPItems plugin)
     {
         this.plugin = plugin;
@@ -65,7 +69,7 @@ public class EnderDragonListener implements Listener
                 Block b = endWorld.getBlockAt(plugin.config.getInt("server.ender_dragon.frame" + i + ".x"),
                         plugin.config.getInt("server.ender_dragon.frame" + i + ".y"),
                         plugin.config.getInt("server.ender_dragon.frame" + i + ".z"));
-                EndPortalFrame f = (EndPortalFrame) b.getBlockData();
+                EndPortalFrame f = (EndPortalFrame)b.getBlockData();
                 f.setEye(false);
                 b.setBlockData(f);
             }
@@ -86,7 +90,7 @@ public class EnderDragonListener implements Listener
             return;
         }
 
-        Player player = (Player) e.getEntity().getShooter();
+        Player player = (Player)e.getEntity().getShooter();
         ItemStack mainhand = player.getInventory().getItemInMainHand();
         ItemStack offhand = player.getInventory().getItemInOffHand();
 
@@ -154,7 +158,7 @@ public class EnderDragonListener implements Listener
             return;
         }
 
-        LivingEntity damaged = (LivingEntity) e.getEntity();
+        LivingEntity damaged = (LivingEntity)e.getEntity();
 
         if (damaged == MobSpawn.activeDragon.getEntity())
         {

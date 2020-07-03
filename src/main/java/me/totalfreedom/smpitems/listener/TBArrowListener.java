@@ -1,7 +1,15 @@
 package me.totalfreedom.smpitems.listener;
 
+import java.util.ArrayList;
+import java.util.List;
 import me.totalfreedom.smpitems.SMPItems;
-import org.bukkit.*;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.EntityEffect;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.TreeType;
+import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
@@ -13,12 +21,10 @@ import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TBArrowListener implements Listener
 {
     private SMPItems plugin;
+
     public TBArrowListener(SMPItems plugin)
     {
         this.plugin = plugin;
@@ -54,7 +60,7 @@ public class TBArrowListener implements Listener
 
         if (bow.getItemMeta().getDisplayName().startsWith(ChatColor.GOLD + "") && bow.getItemMeta().getDisplayName().endsWith("Tree Bow"))
         {
-            arrows.add((Arrow) proj);
+            arrows.add((Arrow)proj);
         }
     }
 
@@ -70,7 +76,7 @@ public class TBArrowListener implements Listener
             return;
         }
 
-        Arrow arrow = (Arrow) proj;
+        Arrow arrow = (Arrow)proj;
         for (Arrow a : arrows)
         {
             if (arrow == a)

@@ -1,6 +1,8 @@
 package me.totalfreedom.smpitems.mob;
 
 import lombok.Getter;
+import me.totalfreedom.smpitems.SMPItems;
+import me.totalfreedom.smpitems.util.SUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.World;
@@ -12,8 +14,6 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import me.totalfreedom.smpitems.SMPItems;
-import me.totalfreedom.smpitems.util.SUtil;
 
 @SuppressWarnings("deprecation")
 public class TubbyEnderDragon extends CustomMob

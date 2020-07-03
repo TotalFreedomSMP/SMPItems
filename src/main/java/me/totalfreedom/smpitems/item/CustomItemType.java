@@ -1,7 +1,5 @@
 package me.totalfreedom.smpitems.item;
 
-import org.bukkit.entity.Bat;
-
 public enum CustomItemType
 {
     AXE(Axe.class),

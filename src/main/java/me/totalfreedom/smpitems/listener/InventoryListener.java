@@ -1,21 +1,22 @@
 package me.totalfreedom.smpitems.listener;
 
+import me.totalfreedom.smpitems.SMPItems;
 import me.totalfreedom.smpitems.item.UltimatiumBoots;
 import me.totalfreedom.smpitems.item.UltimatiumChest;
 import me.totalfreedom.smpitems.item.UltimatiumHelmet;
 import me.totalfreedom.smpitems.item.UltimatiumLeggings;
+import me.totalfreedom.smpitems.util.SUtil;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.PlayerInventory;
-import me.totalfreedom.smpitems.SMPItems;
-import me.totalfreedom.smpitems.util.SUtil;
 
 public class InventoryListener implements Listener
 {
     private SMPItems plugin;
+
     public InventoryListener(SMPItems plugin)
     {
         this.plugin = plugin;
@@ -24,7 +25,7 @@ public class InventoryListener implements Listener
     @EventHandler
     public void onInventoryInteract(InventoryCloseEvent e)
     {
-        Player player = (Player) e.getPlayer();
+        Player player = (Player)e.getPlayer();
         PlayerInventory inv = player.getInventory();
 
         if (player.getGameMode() == GameMode.CREATIVE)

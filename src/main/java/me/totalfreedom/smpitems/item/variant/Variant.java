@@ -1,5 +1,7 @@
 package me.totalfreedom.smpitems.item.variant;
 
+import java.util.ArrayList;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 import me.totalfreedom.smpitems.util.CompactAttribute;
@@ -7,9 +9,6 @@ import me.totalfreedom.smpitems.util.CompactEnchantment;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Variant
 {

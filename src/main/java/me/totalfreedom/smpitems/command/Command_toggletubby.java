@@ -22,7 +22,7 @@ public class Command_toggletubby extends SBase implements CommandExecutor
         {
             return false;
         }
-        Player player = (Player) sender;
+        Player player = (Player)sender;
         boolean toggle = true;
         if (plugin.players.contains(player.getName().toLowerCase()))
         {

@@ -7,7 +7,7 @@ public class SuperFood extends CustomItem
 {
     public SuperFood()
     {
-        super( "Super Food", Material.GLISTERING_MELON_SLICE, Rarity.LEGENDARY, ItemType.OTHER);
+        super("Super Food", Material.GLISTERING_MELON_SLICE, Rarity.LEGENDARY, ItemType.OTHER);
         super.addLoreLine("&cInfinity.");
         super.addLoreLine("&bRestore full hunger!");
         super.addLoreLine("&760s Cooldown");

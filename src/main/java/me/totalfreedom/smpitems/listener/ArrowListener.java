@@ -1,9 +1,13 @@
 package me.totalfreedom.smpitems.listener;
 
+import java.util.ArrayList;
+import java.util.List;
 import me.totalfreedom.smpitems.SMPItems;
-import org.bukkit.*;
+import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
-import org.bukkit.entity.*;
+import org.bukkit.entity.Arrow;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Projectile;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -11,12 +15,10 @@ import org.bukkit.event.entity.EntityShootBowEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ArrowListener implements Listener
 {
     private SMPItems plugin;
+
     public ArrowListener(SMPItems plugin)
     {
         this.plugin = plugin;
@@ -52,7 +54,7 @@ public class ArrowListener implements Listener
 
         if (bow.getItemMeta().getDisplayName().startsWith(ChatColor.GOLD + "") && bow.getItemMeta().getDisplayName().endsWith("POW! Bow"))
         {
-            arrows.add((Arrow) proj);
+            arrows.add((Arrow)proj);
         }
     }
 
@@ -65,7 +67,7 @@ public class ArrowListener implements Listener
             return;
         }
 
-        Arrow arrow = (Arrow) proj;
+        Arrow arrow = (Arrow)proj;
 
         for (Arrow a : arrows)
         {
@@ -96,7 +98,7 @@ public class ArrowListener implements Listener
             return;
         }
 
-        Arrow arrow = (Arrow) damager;
+        Arrow arrow = (Arrow)damager;
         for (Arrow a : arrows)
         {
             if (arrow == a)

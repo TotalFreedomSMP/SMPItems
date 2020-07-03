@@ -1,19 +1,24 @@
 package me.totalfreedom.smpitems.mob;
 
+import java.util.ArrayList;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
+import me.totalfreedom.smpitems.SBase;
+import me.totalfreedom.smpitems.item.CustomItem;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
-import org.bukkit.entity.*;
+import org.bukkit.entity.Creeper;
+import org.bukkit.entity.EnderDragon;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
-import me.totalfreedom.smpitems.SBase;
-import me.totalfreedom.smpitems.item.CustomItem;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CustomMob extends SBase
 {
@@ -79,7 +84,7 @@ public class CustomMob extends SBase
 
     public void spawn(Location location, boolean bc)
     {
-        this.entity = (LivingEntity) location.getWorld().spawnEntity(location.add(0.5, 0, 0.5), type);
+        this.entity = (LivingEntity)location.getWorld().spawnEntity(location.add(0.5, 0, 0.5), type);
 
         if (bc)
         {
@@ -87,7 +92,9 @@ public class CustomMob extends SBase
             {
                 boolean show = false;
                 if (plugin.players.contains(player.getName().toLowerCase()))
+                {
                     show = plugin.players.getBoolean(player.getName().toLowerCase() + ".tubby");
+                }
                 if (show)
                 {
                     Bukkit.broadcastMessage(ChatColor.YELLOW + "A " + ChatColor.GOLD + name + " " +
@@ -99,25 +106,25 @@ public class CustomMob extends SBase
 
         if (this.isBaby() && (entity instanceof Zombie))
         {
-            ((Zombie) entity).setBaby(true);
+            ((Zombie)entity).setBaby(true);
         }
 
         if (this.isPowered() && entity instanceof Creeper)
         {
-            ((Creeper) entity).setPowered(true);
+            ((Creeper)entity).setPowered(true);
         }
 
         if (entity instanceof EnderDragon)
         {
             if (phase != null)
             {
-                ((EnderDragon) entity).setPhase(phase);
+                ((EnderDragon)entity).setPhase(phase);
             }
             for (Player player : Bukkit.getOnlinePlayers())
             {
                 if (player.getWorld().getEnvironment().equals(World.Environment.THE_END))
                 {
-                    ((EnderDragon) entity).getBossBar().addPlayer(player);
+                    ((EnderDragon)entity).getBossBar().addPlayer(player);
                 }
             }
         }

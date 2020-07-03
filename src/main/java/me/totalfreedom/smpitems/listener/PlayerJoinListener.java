@@ -1,15 +1,16 @@
 package me.totalfreedom.smpitems.listener;
 
 import me.totalfreedom.smpitems.SMPItems;
+import me.totalfreedom.smpitems.util.SUtil;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import me.totalfreedom.smpitems.util.SUtil;
 
 public class PlayerJoinListener implements Listener
 {
     private SMPItems plugin;
+
     public PlayerJoinListener(SMPItems plugin)
     {
         this.plugin = plugin;

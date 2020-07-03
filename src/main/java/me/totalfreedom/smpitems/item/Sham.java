@@ -2,7 +2,6 @@ package me.totalfreedom.smpitems.item;
 
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
-import org.bukkit.attribute.AttributeModifier;
 
 public class Sham extends CustomItem
 {

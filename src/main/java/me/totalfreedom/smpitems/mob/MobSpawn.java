@@ -1,10 +1,28 @@
 package me.totalfreedom.smpitems.mob;
 
+import java.util.ArrayList;
+import java.util.List;
+import me.totalfreedom.smpitems.SMPItems;
 import me.totalfreedom.smpitems.item.PowerEye;
-import org.bukkit.*;
+import me.totalfreedom.smpitems.item.TubbyWitherSkeletonSkull;
+import me.totalfreedom.smpitems.util.SUtil;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.type.EndPortalFrame;
-import org.bukkit.entity.*;
+import org.bukkit.entity.Creeper;
+import org.bukkit.entity.Enderman;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.Skeleton;
+import org.bukkit.entity.Spider;
+import org.bukkit.entity.Stray;
+import org.bukkit.entity.WitherSkeleton;
+import org.bukkit.entity.Zombie;
+import org.bukkit.entity.ZombieVillager;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
@@ -13,12 +31,6 @@ import org.bukkit.event.entity.EntitySpawnEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
-import me.totalfreedom.smpitems.SMPItems;
-import me.totalfreedom.smpitems.item.TubbyWitherSkeletonSkull;
-import me.totalfreedom.smpitems.util.SUtil;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MobSpawn implements Listener
 {
@@ -186,7 +198,7 @@ public class MobSpawn implements Listener
                 return;
             }
 
-            EndPortalFrame frame = (EndPortalFrame) block.getBlockData();
+            EndPortalFrame frame = (EndPortalFrame)block.getBlockData();
             int frameID = getFrameID(block.getLocation());
 
             if (frameID != -1)
@@ -325,7 +337,7 @@ public class MobSpawn implements Listener
         {
             if (plugin.config.getInt("server.ender_dragon.frame" + i + ".x") == loc.getX() &&
                     plugin.config.getInt("server.ender_dragon.frame" + i + ".y") == loc.getY() &&
-                        plugin.config.getInt("server.ender_dragon.frame" + i + ".z") == loc.getZ())
+                    plugin.config.getInt("server.ender_dragon.frame" + i + ".z") == loc.getZ())
             {
                 return i;
             }

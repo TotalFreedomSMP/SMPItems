@@ -1,7 +1,7 @@
 package me.totalfreedom.smpitems.item;
 
-import org.bukkit.enchantments.Enchantment;
 import me.totalfreedom.smpitems.util.Groups;
+import org.bukkit.enchantments.Enchantment;
 
 public class WitherAxe extends CustomItem
 {

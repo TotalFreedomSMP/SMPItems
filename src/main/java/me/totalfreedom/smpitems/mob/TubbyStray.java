@@ -1,12 +1,12 @@
 package me.totalfreedom.smpitems.mob;
 
+import me.totalfreedom.smpitems.item.FreedomSword;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import me.totalfreedom.smpitems.item.FreedomSword;
 
 public class TubbyStray extends CustomMob
 {

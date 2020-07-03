@@ -1,13 +1,13 @@
 package me.totalfreedom.smpitems.command;
 
+import me.totalfreedom.smpitems.item.CustomItem;
+import me.totalfreedom.smpitems.item.CustomItemType;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
-import me.totalfreedom.smpitems.item.CustomItem;
-import me.totalfreedom.smpitems.item.CustomItemType;
 
 public class Command_smpgiveitem implements CommandExecutor
 {
@@ -31,7 +31,7 @@ public class Command_smpgiveitem implements CommandExecutor
             return false;
         }
 
-        Player player = (Player) sender;
+        Player player = (Player)sender;
         CustomItemType customItemType;
 
         try

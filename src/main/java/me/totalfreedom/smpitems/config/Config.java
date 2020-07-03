@@ -1,9 +1,8 @@
 package me.totalfreedom.smpitems.config;
 
+import java.io.File;
 import me.totalfreedom.smpitems.SMPItems;
 import org.bukkit.configuration.file.YamlConfiguration;
-
-import java.io.File;
 
 public class Config extends YamlConfiguration
 {

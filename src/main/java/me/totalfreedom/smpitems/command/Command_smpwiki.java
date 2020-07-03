@@ -1,9 +1,9 @@
 package me.totalfreedom.smpitems.command;
 
+import me.totalfreedom.smpitems.util.SUtil;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import me.totalfreedom.smpitems.util.SUtil;
 
 public class Command_smpwiki implements CommandExecutor
 {

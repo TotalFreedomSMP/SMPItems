@@ -1,11 +1,24 @@
 package me.totalfreedom.smpitems.listener;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import me.totalfreedom.smpitems.SMPItems;
-import me.totalfreedom.smpitems.item.*;
+import me.totalfreedom.smpitems.item.End;
+import me.totalfreedom.smpitems.item.Flux;
+import me.totalfreedom.smpitems.item.Landscaper;
+import me.totalfreedom.smpitems.item.Phaser;
+import me.totalfreedom.smpitems.item.SummoningScythe;
+import me.totalfreedom.smpitems.item.SuperFood;
+import me.totalfreedom.smpitems.util.SUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
-import org.bukkit.entity.*;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.TNTPrimed;
+import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -13,11 +26,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
-import me.totalfreedom.smpitems.util.SUtil;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 public class InteractListener implements Listener
 {
@@ -71,7 +79,7 @@ public class InteractListener implements Listener
                     {
                         if (entity instanceof Player)
                         {
-                            ((Player) entity).addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 200, 3));
+                            ((Player)entity).addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 200, 3));
                         }
                     }
 
@@ -121,7 +129,7 @@ public class InteractListener implements Listener
 
                     Block block = player.getTargetBlock(null, 30);
                     landscaperCooldown.add(player);
-                    TNTPrimed tnt = (TNTPrimed) block.getWorld().spawnEntity(block.getLocation().add(0, 20, 0), EntityType.PRIMED_TNT);
+                    TNTPrimed tnt = (TNTPrimed)block.getWorld().spawnEntity(block.getLocation().add(0, 20, 0), EntityType.PRIMED_TNT);
                     tnt.setYield(20);
                     new BukkitRunnable()
                     {

@@ -31,7 +31,7 @@ public class Command_smpspawnmob implements CommandExecutor
             return false;
         }
 
-        Player player = (Player) sender;
+        Player player = (Player)sender;
         CustomMobType mobType;
         try
         {
