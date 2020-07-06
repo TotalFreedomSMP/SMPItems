@@ -44,7 +44,7 @@ public class DamageListener implements Listener
             damaged.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 2));
         }
 
-        if (SUtil.isItemValid(damager.getEquipment().getItemInMainHand(), new VampireFang()))
+        if (SUtil.isItemValid(damager.getEquipment().getItemInMainHand(), new VampireFang()) && !(damager.getHealth() >= damager.getMaxHealth()))
         {
             damager.setHealth(damager.getHealth() + 1);
         }
