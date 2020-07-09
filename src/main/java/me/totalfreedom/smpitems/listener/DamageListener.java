@@ -46,7 +46,14 @@ public class DamageListener implements Listener
 
         if (SUtil.isItemValid(damager.getEquipment().getItemInMainHand(), new VampireFang()) && !(damager.getHealth() >= damager.getMaxHealth()))
         {
-            damager.setHealth(damager.getHealth() + 1);
+            try
+            {
+                damager.setHealth(damager.getHealth() + 1);
+            }
+            catch (IllegalArgumentException ignored)
+            {
+                // This was erroring out the console
+            }
         }
 
         if (SUtil.isItemValid(damaged.getEquipment().getItemInMainHand(), new Sham()) || SUtil.isItemValid(damaged.getEquipment().getItemInOffHand(), new Sham()))
