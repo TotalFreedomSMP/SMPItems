@@ -44,15 +44,11 @@ public class DamageListener implements Listener
             damaged.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 2));
         }
 
-        if (SUtil.isItemValid(damager.getEquipment().getItemInMainHand(), new VampireFang()) && !(damager.getHealth() >= damager.getMaxHealth()))
+        if (SUtil.isItemValid(damager.getEquipment().getItemInMainHand(), new VampireFang()))
         {
-            try
+            if (damager.getHealth() <= damager.getMaxHealth() - 1)
             {
                 damager.setHealth(damager.getHealth() + 1);
-            }
-            catch (IllegalArgumentException ignored)
-            {
-                // This was erroring out the console
             }
         }
 
@@ -67,7 +63,10 @@ public class DamageListener implements Listener
             {
                 e.setCancelled(true);
                 damaged.sendMessage(SUtil.color("&eBlocked damage and regenerated 1 health!"));
-                damaged.setHealth(damaged.getHealth() + 1);
+                if (damaged.getHealth() <= damaged.getMaxHealth() - 1)
+                {
+                    damaged.setHealth(damaged.getHealth() + 1);
+                }
             }
         }
     }
