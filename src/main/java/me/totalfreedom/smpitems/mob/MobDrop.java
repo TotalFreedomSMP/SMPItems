@@ -244,7 +244,6 @@ public class MobDrop implements Listener
                 items.add(5, new Drill());
                 items.add(0.2, new POWbow());
                 items.add(2, new LuckyPick());
-                items.add(0.5, new TreeBow());
                 items.add(0.01, new Landscaper());
                 items.add(20, new MagicalSaddle());
 
@@ -300,7 +299,6 @@ public class MobDrop implements Listener
                 items.add(5, new Drill());
                 items.add(2, new LuckyPick());
                 items.add(0.5, new POWbow());
-                items.add(1, new TreeBow());
                 items.add(0.01, new Landscaper());
                 items.add(20, new MagicalSaddle());
 
@@ -355,7 +353,6 @@ public class MobDrop implements Listener
                 items.add(5, new Drill());
                 items.add(2, new LuckyPick());
                 items.add(0.3, new POWbow());
-                items.add(0.6, new TreeBow());
                 items.add(0.01, new Landscaper());
                 items.add(20, new MagicalSaddle());
 
@@ -459,7 +456,6 @@ public class MobDrop implements Listener
                 items.add(35, new BoneSword());
                 items.add(10, new Respirator());
                 items.add(10, new POWbow());
-                items.add(5, new TreeBow());
                 items.add(20, new Axe());
                 items.add(20, new FreedomAxe());
                 items.add(20, new FreedomBow());

@@ -56,7 +56,6 @@ public enum CustomItemType
     SUPER(Super.class),
     SUPER_FOOD(SuperFood.class),
     SWORD(Sword.class),
-    TREE_BOW(TreeBow.class),
     TUBBY_WITHER_SKELETON_SKULL(TubbyWitherSkeletonSkull.class),
     TURTLE_SHIELD(TurtleShield.class),
     ULTIMATIUM_BOOTS(UltimatiumBoots.class),
