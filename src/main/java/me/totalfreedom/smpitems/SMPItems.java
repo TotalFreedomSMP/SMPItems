@@ -17,7 +17,6 @@ import me.totalfreedom.smpitems.listener.InteractListener;
 import me.totalfreedom.smpitems.listener.InventoryListener;
 import me.totalfreedom.smpitems.listener.PlayerJoinListener;
 import me.totalfreedom.smpitems.listener.RadarListener;
-import me.totalfreedom.smpitems.listener.TBArrowListener;
 import me.totalfreedom.smpitems.mob.MobDrop;
 import me.totalfreedom.smpitems.mob.MobSpawn;
 import me.totalfreedom.smpitems.util.SLog;
@@ -67,7 +66,6 @@ public final class SMPItems extends JavaPlugin
         manager.registerEvents(new DamageListener(this), this);
         manager.registerEvents(new EnderDragonListener(this), this);
         manager.registerEvents(new FlareListener(this), this);
-        manager.registerEvents(new TBArrowListener(this), this);
         manager.registerEvents(new RadarListener(this), this);
 
         manager.registerEvents(new EntityInteractListener(this), this);
