@@ -17,14 +17,13 @@ import org.bukkit.inventory.ItemStack;
 
 public class ArrowListener implements Listener
 {
+    private static List<Arrow> arrows = new ArrayList<>();
     private SMPItems plugin;
 
     public ArrowListener(SMPItems plugin)
     {
         this.plugin = plugin;
     }
-
-    private static List<Arrow> arrows = new ArrayList<>();
 
     @EventHandler
     public void onArrowShoot(EntityShootBowEvent e)

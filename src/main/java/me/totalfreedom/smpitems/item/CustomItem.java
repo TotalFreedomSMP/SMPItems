@@ -100,14 +100,14 @@ public class CustomItem
         this(name, types.get(new Random().nextInt(types.size())), rarity, itemType);
     }
 
-    public void setName(String name)
-    {
-        meta.setDisplayName(name);
-    }
-
     public String getName()
     {
         return meta.getDisplayName();
+    }
+
+    public void setName(String name)
+    {
+        meta.setDisplayName(name);
     }
 
     public void applyMetaToStack()

@@ -19,7 +19,6 @@ import me.totalfreedom.smpitems.listener.PlayerJoinListener;
 import me.totalfreedom.smpitems.listener.RadarListener;
 import me.totalfreedom.smpitems.mob.MobDrop;
 import me.totalfreedom.smpitems.mob.MobSpawn;
-import me.totalfreedom.smpitems.util.SLog;
 import me.totalfreedom.smpitems.util.SUtil;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -43,7 +42,6 @@ public final class SMPItems extends JavaPlugin
         players = new Config(plugin, "players.yml");
         enableListeners();
         enableCommands();
-        SLog.info("Enabled.");
     }
 
     @Override
@@ -51,7 +49,6 @@ public final class SMPItems extends JavaPlugin
     {
         config.save();
         handleDragon();
-        SLog.info("Disabled.");
     }
 
     private void enableListeners()

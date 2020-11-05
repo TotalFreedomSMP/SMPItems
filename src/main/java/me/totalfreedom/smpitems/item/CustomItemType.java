@@ -72,13 +72,13 @@ public enum CustomItemType
         this.clazz = clazz;
     }
 
-    public Class<? extends CustomItem> getCustomItemClass()
-    {
-        return clazz;
-    }
-
     public static CustomItemType findItemType(String s)
     {
         return valueOf(s.toUpperCase());
+    }
+
+    public Class<? extends CustomItem> getCustomItemClass()
+    {
+        return clazz;
     }
 }

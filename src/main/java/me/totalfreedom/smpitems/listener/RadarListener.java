@@ -21,13 +21,12 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class RadarListener implements Listener
 {
     private SMPItems plugin;
+    private List<Player> radarCooldown = new ArrayList<>();
 
     public RadarListener(SMPItems plugin)
     {
         this.plugin = plugin;
     }
-
-    private List<Player> radarCooldown = new ArrayList<>();
 
     @EventHandler
     public void onRadarPlace(BlockPlaceEvent e)

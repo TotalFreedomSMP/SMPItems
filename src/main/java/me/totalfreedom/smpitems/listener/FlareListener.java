@@ -20,13 +20,12 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class FlareListener implements Listener
 {
     private SMPItems plugin;
+    private List<Player> flareCooldown = new ArrayList<>();
 
     public FlareListener(SMPItems plugin)
     {
         this.plugin = plugin;
     }
-
-    private List<Player> flareCooldown = new ArrayList<>();
 
     @EventHandler
     public void onFlarePlace(BlockPlaceEvent e)

@@ -20,13 +20,13 @@ public enum CustomMobType
         this.clazz = clazz;
     }
 
-    public Class<? extends CustomMob> getCustomMobClass()
-    {
-        return clazz;
-    }
-
     public static CustomMobType findMobType(String s)
     {
         return valueOf(s.toUpperCase());
+    }
+
+    public Class<? extends CustomMob> getCustomMobClass()
+    {
+        return clazz;
     }
 }

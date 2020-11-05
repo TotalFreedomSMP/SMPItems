@@ -20,14 +20,13 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class MobDrop implements Listener
 {
+    private final Random r = new Random();
     private SMPItems plugin;
 
     public MobDrop(SMPItems plugin)
     {
         this.plugin = plugin;
     }
-
-    private final Random r = new Random();
 
     @EventHandler
     public void onEntityDeath(EntityDeathEvent e)

@@ -38,7 +38,6 @@ public class Command_smpgiveitem implements CommandExecutor
         {
             customItemType = CustomItemType.findItemType(args[0]);
         }
-
         catch (IllegalArgumentException ex)
         {
             sender.sendMessage(ChatColor.GRAY + "That item does not exist.");

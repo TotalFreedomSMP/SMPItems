@@ -34,15 +34,11 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class MobSpawn implements Listener
 {
-    private SMPItems plugin;
-
-    private static List<Location> tubbyWitherSkullLocations = new ArrayList<>();
-
-    private static List<Player> doubleClickPrevent = new ArrayList<>();
-
     public static TubbyEnderDragon activeDragon;
-
     public static boolean dragonSpawned;
+    private static List<Location> tubbyWitherSkullLocations = new ArrayList<>();
+    private static List<Player> doubleClickPrevent = new ArrayList<>();
+    private SMPItems plugin;
 
     public MobSpawn(SMPItems plugin)
     {
